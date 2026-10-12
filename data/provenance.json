@@ -1,0 +1,21 @@
+{
+  "source_repository_commit": "248e761bdddc357f2af8508d65ab4af9b6ceaa7a",
+  "dimension_summary": {
+    "path": "gemma4_mmebv3/results/h10_dimension_ablation_v1/h10_dimension_ablation_44218648.json",
+    "sha256": "60dd6b16c4be4d32e6c2994dce7aa879d94f28ef702da8c38578846bbd2dc833"
+  },
+  "bounded_screen": {
+    "path": "gemma4_mmebv3/results/h10_mmebv3_confirmation_v1_44295396/aggregate.json",
+    "sha256": "d633662248c0f903404f8d5e52b2dd90768bf5b41020b4bc7c82fded74974b9f",
+    "slurm_job": 44295396,
+    "completed_cells": "210/210"
+  },
+  "full_corpus": {
+    "path": "gemma4_mmebv3/results/h10_mmebv3_full_confirmation_v1_44296002/aggregate.json",
+    "sha256": "0798f20445220e7510e80b8cb5c4816783105fca94c89c14fa0a2c5b34e5bb4e",
+    "slurm_job": 44296002,
+    "completed_cells": "40/40"
+  },
+  "selection_used_mmebv3_qrels": false,
+  "note": "These hashes identify the original aggregate artifacts; SHA256SUMS verifies this compact release."
+}

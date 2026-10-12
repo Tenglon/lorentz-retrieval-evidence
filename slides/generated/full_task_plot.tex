@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\begin{axis}[width=0.92\linewidth,height=0.42\textheight,
+xlabel={H $-$ E on official task metric},symbolic y coords={Nano,MS-COCO,MSR-VTT,Clotho},
+ytick=data,xmin=-0.04,xmax=0.105,grid=major,axis y line*=left]
+\addplot+[only marks,blue,mark=*,mark size=2.4pt,
+error bars/.cd,x dir=both,x explicit] coordinates {(0.058952,Nano) += (0.029273,0) -= (0.029272,0) (-0.004545,MS-COCO) += (0.014796,0) -= (0.014797,0) (-0.010000,MSR-VTT) += (0.019747,0) -= (0.019747,0) (0.000191,Clotho) += (0.000994,0) -= (0.000994,0)};
+\draw[dashed,gray] (axis cs:0,Nano) -- (axis cs:0,Clotho);
+\end{axis}
+\end{tikzpicture}

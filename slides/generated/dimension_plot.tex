@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+\begin{axis}[width=0.88\linewidth,height=0.48\textheight,
+xlabel={embedding dimension},ylabel={development macro MRR},
+xmode=log,log basis x=2,xtick={32,64,128,256},
+ymin=0.72,ymax=0.86,grid=major,legend pos=south east]
+\addplot+[orange!85!black,mark=square*,thick,error bars/.cd,y dir=both,y explicit] coordinates {(32,0.751543) +- (0,0.019708) (64,0.766191) +- (0,0.015587) (128,0.779694) +- (0,0.011786) (256,0.796260) +- (0,0.019372)};
+\addlegendentry{Euclidean}
+\addplot+[blue,mark=*,thick,error bars/.cd,y dir=both,y explicit] coordinates {(32,0.770084) +- (0,0.026747) (64,0.793553) +- (0,0.024392) (128,0.819962) +- (0,0.023271) (256,0.814508) +- (0,0.021450)};
+\addlegendentry{Lorentz}
+\end{axis}
+\end{tikzpicture}

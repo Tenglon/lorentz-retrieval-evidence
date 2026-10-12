@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+slides/*.aux
+slides/*.bbl
+slides/*.blg
+slides/*.log
+slides/*.nav
+slides/*.out
+slides/*.snm
+slides/*.toc
+slides/*.vrb

@@ -1,0 +1,43 @@
+{
+  "backbone": "google/gemma-4-E4B-it",
+  "training_data": ["CIRR", "ChartQA", "WebQA"],
+  "rows_per_source_max": 4096,
+  "held_out_queries_per_source_per_seed": 48,
+  "seeds": [1877, 2221, 2609, 3011, 3469],
+  "shared": {
+    "batch_size": 8,
+    "gradient_accumulation_steps": 2,
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.0,
+    "lora_targets": ["q_proj", "k_proj", "v_proj", "o_proj"],
+    "lora_active_for_all_steps": true,
+    "lora_learning_rate": 0.000075,
+    "online_hard_negatives": 7,
+    "negative_queue_size": 0,
+    "loss": "symmetric_hard_negative_infonce",
+    "explicit_margin_loss_weight": 0.0
+  },
+  "lorentz_h10": {
+    "head": "LayerNorm + row-normalized bias-free linear + direct lift",
+    "dimensions": [256, 128, 64, 32],
+    "curvature": 20.0,
+    "temperature": 0.25,
+    "cosine_mix_weight": 0.2,
+    "cosine_source": "pre_lift_spatial_representation",
+    "head_learning_rate": 0.0001,
+    "max_steps": 256,
+    "warmup_steps": 16,
+    "radius_cap": null,
+    "radius_predictor": false
+  },
+  "matched_euclidean": {
+    "dimensions": [256, 128, 64, 32],
+    "temperature": 0.14,
+    "cosine_mix_weight": 0.2,
+    "head_learning_rate": 0.00025,
+    "max_steps": 256,
+    "warmup_steps": 16,
+    "max_spatial_norm": 2.0
+  }
+}
